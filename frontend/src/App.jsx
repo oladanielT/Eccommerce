@@ -7,10 +7,15 @@ import Dashboard from './views/auth/Dashboard';
 import Logout from './views/auth/logout';
 import ForgotPassword from './views/auth/ForgotPassword';
 import CreatePassword from './views/auth/CreatePassword';
+import StoreHeader from './views/base/StoreHeader';
+import StoreFooter from './views/base/StoreFooter';
+
+
 function App() {
 
   return (
     <BrowserRouter>
+    <StoreHeader/>
       <Routes>
         <Route path='/login' element={<Login/>}/>
         <Route path='/register' element={<SignUp/>}/>
@@ -19,6 +24,7 @@ function App() {
         <Route path='/password-reset' element={<ForgotPassword/>}/>
         <Route path='/password-change' element={<CreatePassword/>}/>
       </Routes>
+    <StoreFooter/>
     </BrowserRouter>
   )
 }
